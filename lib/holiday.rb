@@ -67,7 +67,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.capitalize}:"
     holidays.each do |holiday, supplies|
 
-      puts"  #{holiday.to_s.split('_').map {&:capitalize}.join(' ') }: #{supplies.join(", ")}"
+      puts"  #{holiday.to_s.split('_').map (&:capitalize).join(' ') }: #{supplies.join(", ")}"
       #ie first round :new_years.to_s.split('_')    is "newyears"
       #if you add .join (' ') at the end of this you get "new years"
       #supplies.join (", ") changes the array ["Lights","Wreath"]into a string Lights,Wreath
