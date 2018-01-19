@@ -68,7 +68,10 @@ def all_supplies_in_holidays(holiday_hash)
     holidays.each do |holiday, supplies|
     
       puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
-      binding.pry
+      #ie first round :new_years.to_s.split('_')    is "newyears"
+      #if you add .join (' ') at the end of this you get "new years"
+      #supplies.join (", ") changes the array ["Lights","Wreath"]into a string Lights,Wreath
+      # the capitalize will change the first letter of each element to a capital - this is done before the elements are joined
     end
   end
 end
